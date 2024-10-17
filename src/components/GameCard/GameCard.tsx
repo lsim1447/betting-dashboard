@@ -11,7 +11,7 @@ interface GameCardProps {
 
 const TeamName = styled.h3`
   font-size: 1.25rem;
-  color: #333;
+  color: var(--gray-darkest-color);
   margin: 0.5rem 0;
   min-height: 50px;
 `;
@@ -26,7 +26,7 @@ const TeamLogo = styled.img`
 const Odds = styled.p`
   font-size: 1rem;
   color: #666;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gray-color);
   padding: 8px;
   border-radius: 4px;
   transition:
@@ -34,8 +34,8 @@ const Odds = styled.p`
     color 0.3s;
 
   &:hover {
-    border-color: #007bff;
-    color: #007bff;
+    border-color: var(--blue-color);
+    color: var(--blue-color);
   }
 `;
 
@@ -61,7 +61,7 @@ const TeamWrapper = styled.div`
 const Separator = styled.div`
   width: 50px;
   height: 2px;
-  background-color: #ddd;
+  background-color: var(--gray-light-color);
   margin: 0 10px;
 `;
 

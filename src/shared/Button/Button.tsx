@@ -8,21 +8,21 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const buttonVariants = {
   blue: css`
-    background-color: #007bff;
+    background-color: var(--blue-color);
     &:hover {
-      background-color: #0056b3;
+      background-color: var(--blue-darker-color);
     }
   `,
   green: css`
-    background-color: #28a745;
+    background-color: var(--green-color);
     &:hover {
-      background-color: #218838;
+      background-color: var(--green-darker-color);
     }
   `,
   red: css`
-    background-color: #dc3545;
+    background-color: var(--red-color);
     &:hover {
-      background-color: #c82333;
+      background-color: var(--red-darker-color);
     }
   `,
 };

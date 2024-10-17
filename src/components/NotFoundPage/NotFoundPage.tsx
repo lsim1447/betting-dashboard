@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '../../shared/Button';
 
 const Container = styled.div`
   display: flex;
@@ -8,35 +9,20 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #343a40;
+  color: var(--gray-darkest-color);
   text-align: center;
 `;
 
 const Title = styled.h1`
   font-size: 6rem;
   margin: 0;
-  color: #dc3545;
+  color: var(--red-color);
 `;
 
 const Message = styled.p`
   font-size: 1.5rem;
   margin: 16px 0;
   max-width: 600px;
-`;
-
-const Button = styled.button`
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: #0056b3;
-  }
 `;
 
 const NotFound: React.FC = () => {

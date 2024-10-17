@@ -23,7 +23,7 @@ describe('Select Component', () => {
     );
     expect(container.firstChild).toHaveStyleRule(
       'background-color',
-      '#e2e6ea',
+      'var(--gray-ligher-color)',
       {
         modifier: ':active',
       },

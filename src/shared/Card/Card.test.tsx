@@ -6,7 +6,10 @@ describe('Card Component', () => {
   test('renders with default styles', () => {
     const { container } = render(<Card>Test Card Content</Card>);
 
-    expect(container.firstChild).toHaveStyleRule('background-color', '#fff');
+    expect(container.firstChild).toHaveStyleRule(
+      'background-color',
+      'var(--white-color)',
+    );
     expect(container.firstChild).toHaveStyleRule('text-align', 'center');
     expect(container.firstChild).toHaveStyleRule(
       'transition',

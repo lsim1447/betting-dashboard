@@ -37,11 +37,11 @@ const ModalTitle = styled.h2`
   font-size: 2.4rem;
   margin-top: 0;
   margin-bottom: 4rem;
-  color: #333;
+  color: var(--gray-darkest-color);
 `;
 
 const ModalSubTitle = styled.h4`
-  color: #333;
+  color: var(--gray-darkest-color);
   font-size: 1.1rem;
   text-decoration: underline;
   margin-bottom: 64px;
@@ -58,9 +58,11 @@ const TeamButton = styled.button<{ selected: boolean }>`
   padding: 12px 24px;
   margin: 0 10px;
   font-size: 1rem;
-  color: ${(props) => (props.selected ? '#fff' : '#007bff')};
-  background-color: ${(props) => (props.selected ? '#007bff' : '#fff')};
-  border: 2px solid #007bff;
+  color: ${(props) =>
+    props.selected ? 'var(--white-color)' : 'var(--blue-color)'};
+  background-color: ${(props) =>
+    props.selected ? 'var(--blue-color)' : 'var(--white-color)'};
+  border: 2px solid var(--blue-color);
   border-radius: 5px;
   cursor: pointer;
   transition:
@@ -68,8 +70,8 @@ const TeamButton = styled.button<{ selected: boolean }>`
     color 0.3s;
 
   &:hover {
-    background-color: #0056b3;
-    color: #fff;
+    background-color: var(--blue-darker-color);
+    color: var(--white-color);
   }
 
   &:focus {
@@ -84,7 +86,7 @@ const AmountInput = styled.input`
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--gray-light-color);
   text-align: center;
 `;
 
@@ -98,14 +100,14 @@ const ModalActions = styled.div`
 const Label = styled.label`
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: var(--gray-darkest-color);
   margin-bottom: 10px;
 `;
 
 const CustomLabel = styled.p`
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: var(--gray-darkest-color);
   margin-bottom: 10px;
 `;
 

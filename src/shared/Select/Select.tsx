@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Select = styled.select`
   padding: 10px;
   border-radius: 8px;
-  border: 2px solid #007bff;
-  background-color: #f9f9f9;
+  border: 2px solid var(--blue-color);
+  background-color: var(--white-color);
   font-size: 16px;
   color: #333;
   outline: none;
@@ -15,11 +15,11 @@ export const Select = styled.select`
 
   &:hover,
   &:focus {
-    border-color: #0056b3;
+    border-color: var(--blue-darker-color);
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
   }
 
   &:active {
-    background-color: #e2e6ea;
+    background-color: var(--gray-ligher-color);
   }
 `;

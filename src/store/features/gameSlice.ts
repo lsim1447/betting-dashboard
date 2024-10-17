@@ -21,7 +21,7 @@ const gameSlice = createSlice({
     filterBySport: (state, action: PayloadAction<SportType>) => {
       state.selectedSport = action.payload;
       state.filteredGames =
-        action.payload === 'All'
+        action.payload === SportType.All
           ? state.games
           : state.games.filter((game) => game.sport === action.payload);
     },

@@ -66,9 +66,3 @@ The application will be running at http://localhost:3000.
 ```bash
    npm run test
 ```
-
-#### Running the storybook
-
-```bash
-   npm run storybook
-```

@@ -17,7 +17,7 @@ const FilterContainer = styled.div`
 const Label = styled.label`
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: var(--gray-darkest-color);
 `;
 
 export const Filter: React.FC = () => {
