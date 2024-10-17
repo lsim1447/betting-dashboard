@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Game, SportType } from '../types';
-import { games as mockGames } from '../mockData';
+import { Game, SportType } from '../../types';
+import { games as mockGames } from '../../mockData';
 
 interface GameState {
   games: Game[];
@@ -29,7 +29,10 @@ const gameSlice = createSlice({
       state,
       action: PayloadAction<{ gameId: number; team: 'A' | 'B' }>,
     ) => {
-      const game = state.games.find((g) => g.id === action.payload.gameId);
+      const game = state.filteredGames.find(
+        (g) => g.id === action.payload.gameId,
+      );
+
       if (game) {
         if (action.payload.team === 'A') {
           game.teamA.betsPlaced++;

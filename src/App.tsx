@@ -1,11 +1,28 @@
-import { Dashboard } from './components/Dashboard';
+import styled from 'styled-components';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/HomePage/HomePage';
+import { Navbar } from './components/Navbar';
 
-function App() {
+const AppContainer = styled.div`
+  padding: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+`;
+
+const App: React.FC = () => {
   return (
     <>
-      <Dashboard />
+      <Router>
+        <Navbar />
+
+        <AppContainer>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </AppContainer>
+      </Router>
     </>
   );
-}
+};
 
 export default App;

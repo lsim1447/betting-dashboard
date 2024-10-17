@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store';
-import { filterBySport, placeBet } from '../../features/gameSlice';
+import { placeBet } from '../../store/features/gameSlice';
 import { GameCard } from '../GameCard';
 import { BetModal } from '../BetModal';
 import { Game } from '../../types';
@@ -10,29 +10,15 @@ import { Game } from '../../types';
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-`;
-
-const Filter = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-
-  select {
-    padding: 10px;
-    margin-right: 10px;
-  }
+  justify-items: center;
+  gap: 50px;
 `;
 
 export const Dashboard: React.FC = () => {
   const dispatch = useDispatch();
   const { filteredGames } = useSelector((state: RootState) => state.game);
-  const [selectedGame, setSelectedGame] = useState<Game | null>(null);
 
-  const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch(filterBySport(e.target.value as any));
-  };
+  const [selectedGame, setSelectedGame] = useState<Game | null>(null);
 
   const handleBetClick = (game: Game) => {
     setSelectedGame(game);
@@ -47,19 +33,14 @@ export const Dashboard: React.FC = () => {
 
   return (
     <div>
-      <Filter>
-        <select onChange={handleFilterChange}>
-          <option value="All">All</option>
-          <option value="Soccer">Soccer</option>
-          <option value="Basketball">Basketball</option>
-          <option value="Baseball">Baseball</option>
-        </select>
-      </Filter>
-
       <Grid>
-        {filteredGames.map((game) => (
-          <GameCard key={game.id} game={game} onBetClick={handleBetClick} />
-        ))}
+        {filteredGames?.length === 0 && (
+          <div>There are no matching sport events.</div>
+        )}
+        {filteredGames.length &&
+          filteredGames.map((game) => (
+            <GameCard key={game.id} game={game} onBetClick={handleBetClick} />
+          ))}
       </Grid>
 
       {selectedGame && (

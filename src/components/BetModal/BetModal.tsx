@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Game } from '../../types';
+import { Button } from '../../shared/Button/Button';
+import { Select } from '../../shared/Select/Select';
 
 interface BetModalProps {
   game: Game | null;
@@ -15,7 +17,7 @@ const ModalContainer = styled.div`
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px); /* Added blur effect for better focus */
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,15 +29,21 @@ const ModalContent = styled.div`
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
+  max-width: 600px;
   width: 100%;
   text-align: center;
 `;
 
 const ModalTitle = styled.h2`
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  margin-bottom: 4rem;
   color: #333;
+`;
+
+const ModalSubTitle = styled.h4`
+  color: #333;
+  font-size: 1.1rem;
+  text-decoration: underline;
 `;
 
 const TeamSelector = styled.div`
@@ -60,29 +68,6 @@ const ModalActions = styled.div`
   margin-top: 20px;
 `;
 
-const Button = styled.button`
-  flex: 1;
-  padding: 12px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-
-  &:nth-child(1) {
-    background-color: #28a745;
-    color: white;
-  }
-
-  &:nth-child(2) {
-    background-color: #dc3545;
-    color: white;
-  }
-
-  &:hover {
-    opacity: 0.9;
-  }
-`;
-
 export const BetModal: React.FC<BetModalProps> = ({
   game,
   onClose,
@@ -96,9 +81,14 @@ export const BetModal: React.FC<BetModalProps> = ({
     <ModalContainer>
       <ModalContent>
         <ModalTitle>Place a Bet</ModalTitle>
+
+        <ModalSubTitle>
+          {game.teamA.name} - {game.teamB.name}
+        </ModalSubTitle>
+
         <TeamSelector>
-          <label htmlFor="team-select">Select Team:</label>
-          <select
+          <label htmlFor="team-select">Select winning team:</label>
+          <Select
             id="team-select"
             value={team}
             onChange={(e) => setTeam(e.target.value as 'A' | 'B')}
@@ -109,11 +99,15 @@ export const BetModal: React.FC<BetModalProps> = ({
             <option value="B">
               {game.teamB.name} (Odds: {game.teamB.odds})
             </option>
-          </select>
+          </Select>
         </TeamSelector>
         <ModalActions>
-          <Button onClick={() => onBetSubmit(team)}>Submit Bet</Button>
-          <Button onClick={onClose}>Cancel</Button>
+          <Button variant={'green'} onClick={() => onBetSubmit(team)}>
+            Submit Bet
+          </Button>
+          <Button variant={'red'} onClick={onClose}>
+            Cancel
+          </Button>
         </ModalActions>
       </ModalContent>
     </ModalContainer>
