@@ -1,46 +1,74 @@
-# Getting Started with Create React App
+# Betting Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Betting Dashboard is a React application built with TypeScript and styled-components. It displays betting information for different sports games, allowing users to place bets interactively. The application is designed to be responsive and features a clean, grid-based layout.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Responsive Dashboard**: A grid layout that adapts to different screen sizes, displaying sports games as cards.
+- **Game Cards**: Each card shows:
+  - Team names
+  - Odds for each team
+  - A button to place a bet
+  - The total number of bets placed on each team
+- **Betting Modal**: A modal that appears when the user clicks the "Place a bet" button, allowing users to choose a team and specify the bet amount.
+- **Filtering Mechanism**: Users can filter games by sport type (e.g., Soccer, Basketball, Baseball).
+- **State Management**: Uses Redux for managing the application state.
+- **Styled Components**: Utilizes styled-components for styling, providing a modular and scoped approach to CSS.
+- **Routing**: Implemented using React Router for navigating between the betting dashboard and an about page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Redux**: A state management tool for managing application state.
+- **styled-components**: A CSS-in-JS library for styling React components.
+- **React Router**: A library for routing in React applications.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get started with the Betting Dashboard application, follow the instructions below.
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/lsim1447/betting-dashboard.git
+   cd betting-dashboard
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Install the dependencies:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+   npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Available scripts
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Running the Application
 
-## Learn More
+To start the development server, run:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+   npm run start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The application will be running at http://localhost:3000.
+
+#### Running the tests
+
+```bash
+   npm run test
+```
+
+#### Running the storybook
+
+```bash
+   npm run storybook
+```
