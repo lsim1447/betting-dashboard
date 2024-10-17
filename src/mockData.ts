@@ -43,7 +43,7 @@ export const games: Game[] = [
     teamA: {
       name: 'New York Yankees',
       logoUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/2/25/New_York_Yankees_Primary_Logo.svg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/New_York_Yankees_Primary_Logo.svg/1200px-New_York_Yankees_Primary_Logo.svg.png',
       odds: 2.0,
       betsPlaced: 150,
     },

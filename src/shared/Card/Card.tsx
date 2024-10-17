@@ -8,7 +8,9 @@ export const Card = styled.div`
   text-align: center;
   max-width: 350px;
   width: 100%;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 
   &:hover {
     transform: translateY(-5px);

@@ -9,7 +9,9 @@ export const Select = styled.select`
   color: #333;
   outline: none;
   cursor: pointer;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 
   &:hover,
   &:focus {

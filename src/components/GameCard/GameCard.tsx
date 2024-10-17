@@ -13,6 +13,7 @@ const TeamName = styled.h3`
   font-size: 1.25rem;
   color: #333;
   margin: 0.5rem 0;
+  min-height: 50px;
 `;
 
 const TeamLogo = styled.img`
@@ -25,12 +26,24 @@ const TeamLogo = styled.img`
 const Odds = styled.p`
   font-size: 1rem;
   color: #666;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  transition:
+    border-color 0.3s,
+    color 0.3s;
+
+  &:hover {
+    border-color: #007bff;
+    color: #007bff;
+  }
 `;
 
 const BetsPlaced = styled.p`
-  font-size: 0.875rem;
   color: #777;
-  margin-top: 5px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 25px;
 `;
 
 const TeamsContainer = styled.div`
@@ -68,9 +81,11 @@ export const GameCard: React.FC<GameCardProps> = ({ game, onBetClick }) => {
           <Odds>Odds: {game.teamB.odds}</Odds>
         </TeamWrapper>
       </TeamsContainer>
+
       <Button variant={'blue'} onClick={() => onBetClick(game)}>
         Place a Bet
       </Button>
+
       <BetsPlaced>
         Total Bets: {game.teamA.betsPlaced + game.teamB.betsPlaced}
       </BetsPlaced>

@@ -22,7 +22,7 @@ const NavLink = styled(Link)`
 export const Navbar: React.FC = () => {
   return (
     <Nav>
-      <NavLink to="/">Dashboard</NavLink>
+      <NavLink to="/">Gamdom</NavLink>
       <NavLink to="/login"> Log In </NavLink>
     </Nav>
   );
