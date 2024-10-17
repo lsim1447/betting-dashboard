@@ -1,4 +1,6 @@
-export const games = [
+import { Game } from './types';
+
+export const games: Game[] = [
   {
     id: 1,
     sport: 'Soccer',

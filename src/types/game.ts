@@ -4,7 +4,7 @@ export type SportType = 'Soccer' | 'Basketball' | 'Baseball' | 'All';
 
 export interface Game {
   id: number;
-  sport: string;
+  sport: SportType;
   teamA: Team;
   teamB: Team;
 }

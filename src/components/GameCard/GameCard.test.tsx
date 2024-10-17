@@ -1,8 +1,9 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { GameCard } from './GameCard';
+import { Game } from '../../types';
 
 test('renders game card and calls onBetClick when button is clicked', () => {
-  const mockGame = {
+  const mockGame: Game = {
     id: 1,
     sport: 'Soccer',
     teamA: {
