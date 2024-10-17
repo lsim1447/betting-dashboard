@@ -31,9 +31,9 @@ const gameSlice = createSlice({
     ) => {
       let game: Game | undefined;
 
-      // Override the original games list - to not lose the data after filtering
+      // Update the original games list - to not lose the data after filtering
       // We could make sure the components that rely on filteredGames are re-rendered
-      // and not modify the filteredGames here
+      // and not modify the filteredGames list here
       game = state.games.find((g: Game) => g.id === action.payload.gameId);
       if (game) {
         if (action.payload.team === 'A') {
