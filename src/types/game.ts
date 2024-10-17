@@ -1,6 +1,12 @@
 import { Team } from './team';
 
-export type SportType = 'Soccer' | 'Basketball' | 'Baseball' | 'All';
+export enum SportType {
+  All = 'All',
+  Soccer = 'Soccer',
+  Basketball = 'Basketball',
+  Tennis = 'Tennis',
+  Baseball = 'Baseball',
+}
 
 export interface Game {
   id: number;

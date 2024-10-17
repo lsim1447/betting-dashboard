@@ -11,7 +11,7 @@ interface GameState {
 const initialState: GameState = {
   games: mockGames,
   filteredGames: mockGames,
-  selectedSport: 'All',
+  selectedSport: SportType.All,
 };
 
 const gameSlice = createSlice({

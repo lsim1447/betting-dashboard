@@ -1,9 +1,9 @@
-import { Game } from './types';
+import { Game, SportType } from './types';
 
 export const games: Game[] = [
   {
     id: 1,
-    sport: 'Soccer',
+    sport: SportType.Soccer,
     teamA: {
       name: 'Barcelona',
       logoUrl:
@@ -21,7 +21,7 @@ export const games: Game[] = [
   },
   {
     id: 2,
-    sport: 'Basketball',
+    sport: SportType.Basketball,
     teamA: {
       name: 'Los Angeles Lakers',
       logoUrl:
@@ -39,7 +39,7 @@ export const games: Game[] = [
   },
   {
     id: 3,
-    sport: 'Baseball',
+    sport: SportType.Baseball,
     teamA: {
       name: 'New York Yankees',
       logoUrl:
@@ -57,7 +57,7 @@ export const games: Game[] = [
   },
   {
     id: 4,
-    sport: 'Soccer',
+    sport: SportType.Soccer,
     teamA: {
       name: 'Manchester United',
       logoUrl:
@@ -75,7 +75,7 @@ export const games: Game[] = [
   },
   {
     id: 5,
-    sport: 'Basketball',
+    sport: SportType.Basketball,
     teamA: {
       name: 'Chicago Bulls',
       logoUrl:
@@ -93,7 +93,7 @@ export const games: Game[] = [
   },
   {
     id: 6,
-    sport: 'Baseball',
+    sport: SportType.Baseball,
     teamA: {
       name: 'Los Angeles Dodgers',
       logoUrl:
@@ -111,7 +111,7 @@ export const games: Game[] = [
   },
   {
     id: 7,
-    sport: 'Soccer',
+    sport: SportType.Soccer,
     teamA: {
       name: 'Juventus',
       logoUrl:
@@ -129,7 +129,7 @@ export const games: Game[] = [
   },
   {
     id: 8,
-    sport: 'Basketball',
+    sport: SportType.Basketball,
     teamA: {
       name: 'Brooklyn Nets',
       logoUrl:
@@ -147,7 +147,7 @@ export const games: Game[] = [
   },
   {
     id: 9,
-    sport: 'Baseball',
+    sport: SportType.Baseball,
     teamA: {
       name: 'Houston Astros',
       logoUrl:
@@ -165,7 +165,7 @@ export const games: Game[] = [
   },
   {
     id: 10,
-    sport: 'Soccer',
+    sport: SportType.Soccer,
     teamA: {
       name: 'Chelsea',
       logoUrl:
@@ -183,7 +183,7 @@ export const games: Game[] = [
   },
   {
     id: 11,
-    sport: 'Basketball',
+    sport: SportType.Basketball,
     teamA: {
       name: 'Boston Celtics',
       logoUrl:
@@ -201,7 +201,7 @@ export const games: Game[] = [
   },
   {
     id: 12,
-    sport: 'Baseball',
+    sport: SportType.Baseball,
     teamA: {
       name: 'Chicago Cubs',
       logoUrl:
@@ -219,7 +219,7 @@ export const games: Game[] = [
   },
   {
     id: 13,
-    sport: 'Soccer',
+    sport: SportType.Soccer,
     teamA: {
       name: 'Atletico Madrid',
       logoUrl:
@@ -237,7 +237,7 @@ export const games: Game[] = [
   },
   {
     id: 14,
-    sport: 'Basketball',
+    sport: SportType.Basketball,
     teamA: {
       name: 'Philadelphia 76ers',
       logoUrl:
@@ -256,7 +256,7 @@ export const games: Game[] = [
 
   {
     id: 16,
-    sport: 'Soccer',
+    sport: SportType.Soccer,
     teamA: {
       name: 'Tottenham Hotspur',
       logoUrl:
@@ -273,7 +273,7 @@ export const games: Game[] = [
   },
   {
     id: 17,
-    sport: 'Basketball',
+    sport: SportType.Basketball,
     teamA: {
       name: 'Miami Heat',
       logoUrl:
@@ -291,7 +291,7 @@ export const games: Game[] = [
   },
   {
     id: 18,
-    sport: 'Baseball',
+    sport: SportType.Baseball,
     teamA: {
       name: 'Boston Red Sox',
       logoUrl:
@@ -309,7 +309,7 @@ export const games: Game[] = [
   },
   {
     id: 19,
-    sport: 'Soccer',
+    sport: SportType.Soccer,
     teamA: {
       name: 'Paris Saint-Germain',
       logoUrl:
@@ -327,7 +327,7 @@ export const games: Game[] = [
   },
   {
     id: 20,
-    sport: 'Basketball',
+    sport: SportType.Basketball,
     teamA: {
       name: 'Denver Nuggets',
       logoUrl:
@@ -346,7 +346,7 @@ export const games: Game[] = [
 
   {
     id: 22,
-    sport: 'Soccer',
+    sport: SportType.Soccer,
     teamA: {
       name: 'Borussia Dortmund',
       logoUrl:

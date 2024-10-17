@@ -37,7 +37,7 @@ export const Dashboard: React.FC = () => {
         {filteredGames?.length === 0 && (
           <div>There are no matching sport events.</div>
         )}
-        {filteredGames.length &&
+        {filteredGames.length > 0 &&
           filteredGames.map((game) => (
             <GameCard key={game.id} game={game} onBetClick={handleBetClick} />
           ))}

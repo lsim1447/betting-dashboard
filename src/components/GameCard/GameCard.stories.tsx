@@ -1,5 +1,5 @@
 import { GameCard } from './GameCard';
-import { Game } from '../../types';
+import { Game, SportType } from '../../types';
 
 export default {
   title: 'Components/GameCard',
@@ -8,7 +8,7 @@ export default {
 
 const game: Game = {
   id: 1,
-  sport: 'Soccer',
+  sport: SportType.Soccer,
   teamA: {
     name: 'Team A',
     odds: 1.5,

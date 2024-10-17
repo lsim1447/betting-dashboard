@@ -33,10 +33,9 @@ export const Filter: React.FC = () => {
         <FilterContainer>
           <Label htmlFor="sport-filter">Filter by Sport:</Label>
           <Select id="sport-filter" onChange={handleFilterChange}>
-            <option value="All">All</option>
-            <option value="Soccer">Soccer</option>
-            <option value="Basketball">Basketball</option>
-            <option value="Baseball">Baseball</option>
+            {Object.values(SportType).map((sport) => {
+              return <option value={sport}>{sport}</option>;
+            })}
           </Select>
         </FilterContainer>
       </FilterContainer>

@@ -1,11 +1,11 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { GameCard } from './GameCard';
-import { Game } from '../../types';
+import { Game, SportType } from '../../types';
 
 test('renders game card and calls onBetClick when button is clicked', () => {
   const mockGame: Game = {
     id: 1,
-    sport: 'Soccer',
+    sport: SportType.Soccer,
     teamA: {
       name: 'Team A',
       odds: 1.5,
