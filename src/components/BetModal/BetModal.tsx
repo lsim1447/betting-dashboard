@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { Game } from '../../types';
 import { Button } from '../../shared/Button';
 import { Input } from '../../shared/Input';
@@ -10,7 +11,7 @@ interface BetModalProps {
   onBetSubmit: (team: 'A' | 'B', amount: number) => void;
 }
 
-const ModalContainer = styled.div`
+const ModalContainer = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
@@ -127,7 +128,12 @@ export const BetModal: React.FC<BetModalProps> = ({
   };
 
   return (
-    <ModalContainer>
+    <ModalContainer
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.8 }}
+      transition={{ duration: 0.3 }}
+    >
       <ModalContent>
         <CloseIcon onClick={onClose}>×</CloseIcon>
 
