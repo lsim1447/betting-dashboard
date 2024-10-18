@@ -1,9 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { Select } from './Select';
-import 'jest-styled-components';
 
 describe('Select Component', () => {
-  test('renders correctly with default styles', () => {
+  test('renders correctly and contains options', () => {
     render(
       <Select>
         <option value="1">Option 1</option>
@@ -11,17 +10,25 @@ describe('Select Component', () => {
       </Select>,
     );
 
-    expect(screen.getAllByRole('option')).toHaveLength(2);
+    const selectElement = screen.getByRole('combobox');
+    expect(selectElement).toBeInTheDocument();
+
+    const options = screen.getAllByRole('option');
+    expect(options).toHaveLength(2);
+
+    expect(screen.getByText('Option 1')).toBeInTheDocument();
+    expect(screen.getByText('Option 2')).toBeInTheDocument();
   });
 
   test('applies active styles', () => {
-    const { container } = render(
+    render(
       <Select>
         <option value="1">Option 1</option>
         <option value="2">Option 2</option>
       </Select>,
     );
-    expect(container.firstChild).toHaveStyleRule(
+
+    expect(screen.getByRole('combobox')).toHaveStyleRule(
       'background-color',
       'var(--gray-ligher-color)',
       {

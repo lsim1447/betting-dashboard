@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import { Button } from './Button';
-import 'jest-styled-components';
 
 describe('Button Component', () => {
   test('renders correctly with default variant (blue)', () => {

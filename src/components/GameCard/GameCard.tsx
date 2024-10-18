@@ -82,7 +82,7 @@ export const GameCard: React.FC<GameCardProps> = ({ game, onBetClick }) => {
         </TeamWrapper>
       </TeamsContainer>
 
-      <Button variant={'blue'} onClick={() => onBetClick(game)}>
+      <Button variant={'primary'} onClick={() => onBetClick(game)}>
         Place a Bet
       </Button>
 

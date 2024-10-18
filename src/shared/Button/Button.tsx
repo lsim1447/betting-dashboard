@@ -3,10 +3,23 @@ import { ButtonHTMLAttributes } from 'react';
 import shouldForwardProp from '@styled-system/should-forward-prop';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'blue' | 'green' | 'red';
+  variant?: 'blue' | 'green' | 'red' | 'primary' | 'secondary';
 }
 
 const buttonVariants = {
+  primary: css`
+    background-color: var(--blue-color);
+    &:hover {
+      background-color: var(--blue-darker-color);
+    }
+  `,
+  secondary: css`
+    background-color: var(--gray-color);
+    color: var(---white-color)
+    &:hover {
+      background-color: var(--gray-darker-color);
+    }
+  `,
   blue: css`
     background-color: var(--blue-color);
     &:hover {
@@ -38,6 +51,7 @@ export const Button = styled('button').withConfig({
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  width: 100%;
 
   ${({ variant = 'blue' }) => buttonVariants[variant]}
 

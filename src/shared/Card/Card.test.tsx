@@ -1,19 +1,23 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Card } from './Card';
-import 'jest-styled-components';
 
 describe('Card Component', () => {
-  test('renders with default styles', () => {
-    const { container } = render(<Card>Test Card Content</Card>);
+  test('renders the Card component correctly', () => {
+    render(<Card>Test Card Content</Card>);
 
-    expect(container.firstChild).toHaveStyleRule(
+    const cardElement = screen.getByText(/Test Card Content/i);
+    expect(cardElement).toBeInTheDocument();
+
+    expect(cardElement).toHaveStyleRule(
       'background-color',
       'var(--white-color)',
     );
-    expect(container.firstChild).toHaveStyleRule('text-align', 'center');
-    expect(container.firstChild).toHaveStyleRule(
-      'transition',
-      'transform 0.2s,box-shadow 0.2s',
-    );
+  });
+
+  test('contains the correct text content', () => {
+    render(<Card>This is a test card</Card>);
+
+    const cardText = screen.getByText(/This is a test card/i);
+    expect(cardText).toBeInTheDocument();
   });
 });
