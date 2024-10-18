@@ -61,6 +61,8 @@ To start the development server, run:
 
 The application will be running at http://localhost:3000.
 
+The deployed version of the app can be found here: https://betting-dashboard-gules.vercel.app/
+
 #### Running the tests
 
 ```bash
